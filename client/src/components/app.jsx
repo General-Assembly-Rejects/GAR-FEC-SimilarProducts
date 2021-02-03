@@ -11,7 +11,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/products')
+    axios.get('http://3.140.208.154:3004/api/products')
       .then((result) => {
         this.setState({
           similarProducts: result.data
@@ -27,10 +27,12 @@ class App extends React.Component {
       return <SimilarProduct product={product}/>
     });
     return(
-      <div class="similar-product-container">
-        {similarProducts}
+      <div>
+        <h1>Similar Products</h1>
+        <div class="similar-product-container">
+          {similarProducts}
+        </div>
       </div>
-
     );
   }
 }
