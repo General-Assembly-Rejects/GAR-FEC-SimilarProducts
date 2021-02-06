@@ -11,7 +11,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://3.140.208.154:3004/api/products')
+    axios.get('localhost/api/products')
       .then((result) => {
         this.setState({
           similarProducts: result.data
